@@ -1,0 +1,31 @@
+always end with a newline
+
+no printf, alloc and free
+
+all functions from standard library
+
+UpperCamelCase
+
+-std=c++98
+
+ClassName.hpp/ClassName.h, ClassName.cpp, or ClassName.tpp
+
+forbidden:
+    -friend is a keyword in C++ that is used to share the information of a class that was previously hidden.
+    -no Containers (vector/list/map/and so forth) and no Algorithms (anything that
+        requires to include the <algorithm> header)
+
+From Module 02 to Module 08, your classes must be designed in the Orthodox
+Canonical Form : dont know yet
+
+Any function implementation put in a header file (except for function templates)
+means 0 to the exercise
+
+den punkt würde ich gerne mit jemandem beprechen
+->You should be able to use each of your headers independently from others. Thus,
+they must include all the dependencies they need. However, you must avoid the
+problem of double inclusion by adding include guards. Otherwise, your grade will
+be 0.
+
+compiling
+    c++  megaphone.cpp
