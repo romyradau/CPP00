@@ -24,7 +24,7 @@ int main(int argc, char **argv)
 				std::cout << C;
 				l++;
 			}
-			// std::cout << " ";
+			//std::cout << " ";
 			w++;
 		}
 		std::cout << "\n";

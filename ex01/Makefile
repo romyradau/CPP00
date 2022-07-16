@@ -1,10 +1,10 @@
-NAME = megaphone
+NAME = phonebook
 
 CC = c++
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC = megaphone.cpp
+SRC = phonebook.cpp
 
 all: $(NAME)
 
