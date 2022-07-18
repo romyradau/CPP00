@@ -1,17 +1,38 @@
 #include "PhoneBook.hpp"
 
 int main() {
-    Contact firstContact;
 
-    std::cout << firstContact.set_firstName() << std::endl;
-    std::cout << firstContact.set_lastName() << std::endl;
-    std::cout << firstContact.set_nickname() << std::endl;
-    std::cout << firstContact.set_phoneNumber() << std::endl;
-    std::cout << firstContact.set_darkestSecret() << std::endl;
+    std::string input;
+    PhoneBook phonebook;
+
+    getline(std::cin, input);
+    while (input.compare("EXIT") != 0)
+    {
+        if (input.compare("ADD") == 0){
+            phonebook.add();
+            std::cout << "type ADD, Search or EXIT" << std::endl;
+        }
+        // if (input.compare("SEARCH") == 0){
+        //     phonebook.search(phonebook);
+        //     std::cout << "type ADD, Search or EXIT" << std::endl;
+        // }
+        else
+            std::cout << "type ADD, SEARCH or EXIT goddammit!" << std::endl;
+        getline(std::cin, input);
+    }
+    // phonebook.exit(phonebook);
+    // //wie sieht's heir aus mit free oder so?
+
+
+    // std::cout << firstContact.set_firstName() << std::endl;
+    // std::cout << firstContact.set_lastName() << std::endl;
+    // std::cout << firstContact.set_nickname() << std::endl;
+    // std::cout << firstContact.set_phoneNumber() << std::endl;
+    // std::cout << firstContact.set_darkestSecret() << std::endl;
 
     //printed sofort die eingabe aus
 
-    
+     
     // std::getline(std::cin, firstContact.set_firstName);
     // std::getline(std::cin, firstContact->lastName);
     // std::getline(std::cin, firstContact->nickname);
