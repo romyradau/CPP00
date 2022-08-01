@@ -77,9 +77,3 @@ std::string Contact::get_darkestSecret() const{
 
     return (this->darkestSecret);
 }
-
-std::string Contact::set_value(std::string field){
-    std::getline(std::cin, field);
-    return (field);
-}
-//die vielleicht um zu automatisieren

@@ -13,15 +13,13 @@ void    PhoneBook::display_phonebook(void) const{
     int i;
     i = 0;
 
-    //schau dir heir bitte an wie man gescheit inkrementiert!
-
-    std::cout << std::setw(10) << "index|";
+    std::cout << std::setw(11) << "index|";
     std::cout << std::setw(10) << "first name|";
     std::cout << std::setw(11) << "last name|";
     std::cout << std::setw(11) << "nickname|" << std::endl;
     while (i < 8)
     {
-        std::cout << std::setw(9) << i + 1 << "|";
+        std::cout << std::setw(10) << i + 1 << "|";
         if (con_entry[i].get_firstName().size() >= 10)
             std::cout << std::setw(8) <<con_entry[i].get_firstName().substr(0,9) << "." << "|";
         else
@@ -31,7 +29,7 @@ void    PhoneBook::display_phonebook(void) const{
         else
         std::cout << std::setw(10) << con_entry[i].get_lastname() << "|";
         if (con_entry[i].get_nickname().size() >= 10)
-            std::cout << std::setw(8) <<con_entry[i].get_nickname().substr(0,9) << "." << "|" <<std::endl;
+            std::cout << std::setw(8) <<con_entry[i].get_nickname().substr(0,9) << "." << "|" << std::endl;
         else
         std::cout << std::setw(10) << con_entry[i].get_nickname() << "|" << std::endl;
         i++;
@@ -61,19 +59,20 @@ void    PhoneBook::search(void) const{
     display_phonebook();
     std::cout << "Enter index" << std::endl;
     std::cin >> index;
-    while ((entry_counter && index > entry_counter) || index < 1){
-
+    while ((entry_counter && index > entry_counter) || index < 1 || index > 8){
         std::cout << "there's no entry with that index" << std::endl;
+        std::cin.clear();
+        std::cin.ignore(500, '\n');
+        std::cout << "Enter index" << std::endl;
         std::cin >> index;
     }
-    std::cout << std::endl << con_entry[index - 1].get_firstName() << std::endl;
-    std::cout << con_entry[index - 1].get_lastname() << std::endl;
-    std::cout << con_entry[index - 1].get_nickname() << std::endl;
-    std::cout << con_entry[index - 1].get_phoneNumber() << std::endl;
-    std::cout << con_entry[index - 1].get_darkestSecret() << std::endl;
-    std::cin.ignore();
-
+    if (entry_counter && index < 8){
+        std::cout << std::endl << con_entry[index - 1].get_firstName() << std::endl;
+        std::cout << con_entry[index - 1].get_lastname() << std::endl;
+        std::cout << con_entry[index - 1].get_nickname() << std::endl;
+        std::cout << con_entry[index - 1].get_phoneNumber() << std::endl;
+        std::cout << con_entry[index - 1].get_darkestSecret() << std::endl;
+    }
+    std::cin.clear();
+    std::cin.ignore(500, '\n');
 }
-//wo genau benutzt man upperCamelcase?
-//warum muss ich bei getline nicht std:: davor schreiben?
-//setw genau verstehn ?!

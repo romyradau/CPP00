@@ -27,12 +27,7 @@ int main(int argc, char **argv)
 			//std::cout << " ";
 			w++;
 		}
-		std::cout << "\n";
+		std::cout << std::endl;
 	}	
 	return (0);	
 }
-
-//bedeueten die sterne was?
-//darf ich iostream benutzen?
-//for newlines you can also use std::cout << "abc" << endl
-//dei beispiele im PDF sind ohne die kommentar spaces aber 

@@ -1,7 +1,4 @@
-#include <iostream>
 #include <iomanip>
-#include <cstring>
-#include <ctype.h>
 #include "Contact.hpp"
 
 #ifndef PHONEBOOK_HPP
