@@ -6,7 +6,7 @@ FLAGS = -Wall -Wextra -Werror -std=c++98
 
 FLAGS += -g
 
-SRC = Account.cpp
+SRC = Account.cpp tests.cpp
 
 
 

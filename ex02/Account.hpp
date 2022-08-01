@@ -27,7 +27,7 @@ public:
 	static int	getTotalAmount( void );
 	static int	getNbDeposits( void );
 	static int	getNbWithdrawals( void );
-	static void	displayAccountsInfos( void );
+	static void	displayAccountsInfos( void ); //check all
 
 	Account( int initial_deposit );
 	~Account( void );
@@ -40,12 +40,13 @@ public:
 
 private:
 
-	static int	_nbAccounts;
-	static int	_totalAmount;
+	static int	_nbAccounts; 
+	static int	_totalAmount; 
 	static int	_totalNbDeposits;
 	static int	_totalNbWithdrawals;
 
 	static void	_displayTimestamp( void );
+	
 
 	int				_accountIndex;
 	int				_amount;
